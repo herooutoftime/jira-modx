@@ -1,0 +1,38 @@
+<div class="ticket">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse-[[+ticket]]">
+                <span class="badge badge-[[+bdg_class]]"><i class="[[+type_icon]] icon-white"></i></span>
+                [[+summary]] ([[+status_text]], [[+modx_user]], [[+created]])
+            </a>
+        </div>
+        <div id="collapse-[[+ticket]]" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <p>[[+description]]</p>
+                <p>
+                    <span class="badge badge-[[+status_class]]"><i class="[[+status_icon]] icon-white"></i> Dieses Ticket ist "[[+status_text]]"</span> 
+                    <span class="badge badge-info"><i class="icon-user icon-white"></i> von [[+modx_user]]</span>
+                    <span class="badge badge-info"><i class="icon-calendar icon-white"></i> erstellt am [[+created]]</span>
+                    <span class="badge"><i class="icon-tags icon-white"></i> Tags: [[+tags]]</span>
+                </p>
+                
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h6>Aktionen</h6>
+                        <div class="btn-group">
+                            <a class="btn btn-mini btn-primary" href="[[~[[++jira.detail]]]]?ticket=[[+ticket]]"><i class="icon-eye-open icon-white"></i> Ansehen</a>
+                            <a class="btn btn-mini btn-primary" href="[[~[[++jira.edit]]]]?ticket=[[+ticket]]"><i class="icon-pencil icon-white"></i> Editieren</a>
+                            <a class="btn btn-mini btn-success modal-window" href="#" name="solve" rel="[[+ticket]]" title="[[+summary]] l&ouml;sen"><i class="icon-ok icon-white"></i> L&ouml;sen</a>
+                            <a class="btn btn-mini btn-danger modal-window" href="#" name="close" rel="[[+ticket]]" title="[[+summary]] schlie&szlig;en"><i class="icon-close icon-white"></i> Schliessen</a>
+                            <a class="btn btn-mini btn-danger action" href="#" name="remove" rel="[[+ticket]]"><i class="icon-remove icon-white"></i> Entfernen</a>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <h6>Fortschritt ([[+percent]]%)</h6>
+                        <div class="progress progress-striped progress-success"><div class="bar bar-success" style="width: [[+percent]]%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

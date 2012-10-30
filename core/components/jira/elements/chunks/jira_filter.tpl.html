@@ -1,0 +1,43 @@
+<form class="form-inline" method="post">
+    <label class="control-label" for="type">Typ:</label>
+    <select class="input-medium" name="issuetype">
+        <option value="">Alle</option>
+        <option value="1" [[+issuetype:eq=`1`then=`selected`:else=``]]>Fehler</option>
+        <option value="3" [[+issuetype:eq=`3`:then=`selected`:else=``]]>Aufgabe</option>
+        <option value="4" [[+issuetype:eq=`4`:then=`selected`:else=``]]>Verbesserung</option>
+    </select>
+    <label class="control-label" for="priority">Priorit&auml;t:</label>
+    <select class="input-medium" class="select" id="priority" name="priority">
+        <option value="">Alle Priorit&auml;ten</option>
+        <option value="1" [[+priority:eq=`1`:then=`selected`:else=``]]>Blocker</option>
+        <option value="2" [[+priority:eq=`2`:then=`selected`:else=``]]>Critical</option>
+        <option value="3" [[+priority:eq=`3`:then=`selected`:else=``]]>Major</option>
+        <option value="4" [[+priority:eq=`4`:then=`selected`:else=``]]>Minor</option>
+        <option value="5" [[+priority:eq=`5`:then=`selected`:else=``]]>Trivial</option>
+    </select>
+    <label class="control-label" for="customfield_10300">Ersteller:</label>
+    <select class="input-medium" class="select" id="customfield_10300" name="cf10300">
+        <option value="">Alle</option>
+        <option value="andreas">Andreas</option>
+        <option value="jan">Jan</option>
+        <option value="c_buresch">BUR</option>
+        <option value="b_fuchs">FUC</option>
+        <option value="d_reisenauer">REI</option>
+        <option value="g_rothensteiner">ROT</option>
+    </select>
+    <label class="control-label" for="labels">Status:</label>
+    <select class="input-medium" class="select" id="status" name="status">
+        <option value="">Alle</option>
+        <option value="1" [[+status:eq=`1`:then=`selected`:else=``]]>Offen</option>
+        <option value="5" [[+status:eq=`5`:then=`selected`:else=``]]>Gel&ouml;st</option>
+        <option value="6" [[+status:eq=`6`:then=`selected`:else=``]]>Geschlossen</option>
+    </select>
+    <label class="control-label" for="text">Volltext:</label>
+    <input type="text" id="text" name="text" placeholder="[[+text:defautl=`Suchbegriff`]]"/>
+    <input type="submit" class="input-medium btn" name="[[+button_name:default=`save`]]" value="[[+button_text:default=`Filtern`]]" />
+</form>
+<hr/>
+<div class="row-fluid">
+[[+jql:notempty=`<div class="span9"><pre>[[+jql]]</pre></div>`:default=``]]
+</div>
+<hr />

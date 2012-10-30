@@ -1,0 +1,23 @@
+Changelog file for Jira component.
+
+Jira 1.5
+====================================
+- Added system setting to transport package
+- Added sytem setting to snippet source
+
+Jira 1.4
+====================================
+- Added static file chunks
+
+Jira 1.2
+====================================
+- Added chunks transport script 
+
+Jira 1.1
+====================================
+- Added chunks transport script
+ 
+ 
+Jira 1.0
+====================================
+- Initial commit
